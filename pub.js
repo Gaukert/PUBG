@@ -32,7 +32,10 @@
             args = event.getArgs(),
             username = args[0] === undefined ? undefined : String(args[0]),
             statsType = args[1] === undefined ? undefined : String(args[1]),
-            allowedTypes = ['solo', 'duo', 'squad'];
+            allowedTypes = ['solo', 'duo', 'squad'],
+            region = args[2] === undefined ? undefined : String(args[2]),
+            // 2nd check needs to be implemented.
+            allowedTypes2 = ['eu','na','as','oc','sa','sea';
 
         if (command.equalsIgnoreCase('pubg')) {
             // Check arguments
@@ -44,7 +47,7 @@
             }
 
             // Get JSON and parse stats
-            var json = JSON.parse(_getJSON("https://pubgtracker.com/api/profile/pc/" + username));
+            var json = JSON.parse(_getJSON("https://pubgtracker.com/api/profile/pc/" + username + "?region=" + region));
             var stats = getRanks(json);
 
             // Decide which stats types to print
