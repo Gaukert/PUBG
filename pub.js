@@ -35,7 +35,7 @@
             allowedTypes = ['solo', 'duo', 'squad'],
             region = args[2] === undefined ? undefined : String(args[2]),
             // 2nd check needs to be implemented.
-            allowedTypes2 = ['eu','na','as','oc','sa','sea';
+            allowedTypes2 = ['eu','na','as','oc','sa','sea'];
 
         if (command.equalsIgnoreCase('pubg')) {
             // Check arguments
